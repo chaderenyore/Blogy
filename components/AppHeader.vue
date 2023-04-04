@@ -3,14 +3,27 @@
     <header class="header">
       <div
         class="backdrop no-display transition-all duration-250 ease-linear"
-        @click="toggleMenu"></div>
+        @click="toggleMenu"
+      ></div>
       <div
         class="container w-[90%] h-[80px] m-auto flex justify-between items-center"
       >
         <div class="header-logo">
           <img src="~/assets/img/Blogy.svg" alt="Your gateway to Blogging" />
         </div>
-        <div class="mobile-menu md:hidden">
+        <div class="header-items__desktop hidden md:flex w-3/6 items-center justify-around content">
+          <a href="" class="nav-link__desktop">Home</a>
+          <a href="" class="nav-link__desktop">Travel</a>
+          <a href="" class="nav-link__desktop">Food</a>
+          <a href="" class="nav-link__desktop">Lifestyle</a>
+          <a href="" class="nav-link__desktop">Fashion</a>
+
+          <div class="header-items__desktop--searchbar bg-[#F5F5F5] text-[#6D7280] p-2">
+            <Icon name="ion:search" class="mr-1"/>
+            <input required type="search" name="search" id="search" class="bg-[inherit] text-[inherit] focus:outline-transparent">
+          </div>
+        </div>
+        <div class="hamburger-menu md:hidden">
           <Icon
             name="ion:md-menu"
             size="2.8rem"
@@ -20,7 +33,7 @@
         </div>
       </div>
       <div
-        class="header-items--mobile fixed top-0 right-0 h-[100vh] w-[50%] bg-[#C4C4C4] flex flex-col items-center justify-center transition-all duration-150 ease-in no-display md:hidden"
+        class="header-items__mobile fixed top-0 right-0 h-[100vh] w-[50%] bg-[#C4C4C4] flex flex-col items-center justify-center transition-all duration-150 ease-in no-display md:hidden"
       >
         <Icon
           class="absolute top-6 right-8 cursor-pointer"
