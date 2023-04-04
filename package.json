@@ -9,6 +9,7 @@
   },
   "devDependencies": {
     "nuxt": "3.0.0",
+    "nuxt-icon": "^0.3.3",
     "nuxt-windicss": "^2.6.0"
   }
 }
