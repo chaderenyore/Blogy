@@ -1,7 +1,6 @@
 <template>
-  <NuxtLayout>
-    <p>{{ message }}</p>
-  </NuxtLayout>
+  <div>
+  </div>
 </template>
 
 <script>
