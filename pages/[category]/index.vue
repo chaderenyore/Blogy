@@ -12,7 +12,7 @@
     <div
         class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4"
       >
-    <section v-for="article in categoryArticles" :key="article.sys.id" class="flex">
+    <section v-for="article in categoryArticles" :key="article.sys.id" class="flex justify-center md:justify-start">
       <ArticleComponent :article="article" />
     </section>
     </div>
