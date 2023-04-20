@@ -15,6 +15,7 @@
     "nuxt-windicss": "^2.6.1"
   },
   "dependencies": {
+    "@twicpics/components": "^0.17.2",
     "contentful": "^10.1.0"
   }
 }

@@ -2,16 +2,20 @@
   <main>
     <section class="header-nav bg-[#F5F5F5]">
       <div
-        class="container w-[90%] h-[80px] m-auto flex flex-col justify-center py-16"
+        class="container w-[90%] lg:w-[75%] h-[80px] m-auto flex flex-col justify-center py-16"
       >
         <h1 class="heading-text text-[#272343] text-2xl text-center font-bold">
           '{{ categoryNameHeading }}' Here's what we've got
         </h1>
       </div>
     </section>
-    <section v-for="article in categoryArticles">
+    <div
+        class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4"
+      >
+    <section v-for="article in categoryArticles" :key="article.sys.id" class="flex">
       <ArticleComponent :article="article" />
     </section>
+    </div>
   </main>
 </template>
 
@@ -27,7 +31,7 @@
   });
 
   let categoryArticles;
-  contentfulClient
+  await contentfulClient
     .getEntries({
       content_type: 'blogPost',
       'fields.category.sys.contentType.sys.id': 'category',
@@ -36,7 +40,6 @@
     .then((response) => {
       categoryArticles = response.items;
       console.log(categoryArticles);
-      
     })
     .catch(console.error);
 </script>

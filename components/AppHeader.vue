@@ -6,7 +6,7 @@
         @click="toggleMenu"
       ></div>
       <div
-        class="container w-[90%] h-[80px] m-auto flex justify-between items-center"
+        class="container w-[90%] lg:w-[75%] h-[80px] m-auto flex justify-between items-center"
       >
         <div class="header-logo">
           <img src="~/assets/img/Blogy.svg" alt="Your gateway to Blogging" />
