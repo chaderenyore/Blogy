@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@twicpics/components':
+    specifier: ^0.17.2
+    version: 0.17.2
   contentful:
     specifier: ^10.1.0
     version: 10.1.0
@@ -992,6 +995,10 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
     dev: true
+
+  /@twicpics/components@0.17.2:
+    resolution: {integrity: sha512-9B1YDG33gRZdZoS0epCY7qu+eGepE8tVtoAY+J0u6mrmZqwoDB7QKu309x6tE+uP6nbhIQPPg/xP7QR6+FGRaA==}
+    dev: false
 
   /@types/estree@1.0.1:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
