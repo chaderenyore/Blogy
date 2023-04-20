@@ -9,12 +9,14 @@
         </h1>
       </div>
     </section>
-    <div
-        class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4"
-      >
-    <section v-for="article in categoryArticles" :key="article.sys.id" class="flex justify-center md:justify-start">
-      <ArticleComponent :article="article" />
-    </section>
+    <div class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4">
+      <section class="flex flex-col justify-center md:flex-row md:justify-start gap-8 lg:justify-around flex-wrap">
+        <ArticleComponent
+          v-for="article in categoryArticles"
+          :key="article"
+          :article="article"
+        />
+      </section>
     </div>
   </main>
 </template>

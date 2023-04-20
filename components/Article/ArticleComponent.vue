@@ -1,5 +1,5 @@
 <template>
-  <article class="relative basis-10/12 md:basis-4/12 lg:basis-3/12">
+  <article class="relative basis-full md:basis-6/12  lg:basis-5/12">
     <div class="article-cover">
       <!-- <nuxt-image src="~/assets/img/Rectangle 4.jpg" /> -->
       <TwicImg
