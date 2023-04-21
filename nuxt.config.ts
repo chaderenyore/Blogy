@@ -12,10 +12,11 @@ export default defineNuxtConfig({
     },
   },
   devServerHandlers: [],
-  modules: ['nuxt-windicss', 'nuxt-icon', '@twicpics/components/nuxt3'],
-  twicpics: {
-    domain: 'https://nyore.twic.pics',
-  },
+  modules: [
+    'nuxt-windicss',
+    'nuxt-icon',
+    '@nuxt/image-edge',
+  ],
   runtimeConfig: {
     CTF_SPACE_ID: 'uh4wvf4o2442',
     CTF_CDA_ACCESS_TOKEN: 'M0rx7tWrwHAILDed1c7BQpe23zStc_1GgPILi4gbo_U',

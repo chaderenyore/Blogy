@@ -9,13 +9,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxt/image-edge": "1.0.0-28020728.5df24eb",
     "@types/node": "^18",
     "nuxt": "^3.4.1",
     "nuxt-icon": "^0.3.3",
     "nuxt-windicss": "^2.6.1"
   },
   "dependencies": {
-    "@twicpics/components": "^0.17.2",
     "contentful": "^10.1.0"
   }
 }

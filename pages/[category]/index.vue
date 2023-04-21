@@ -10,10 +10,10 @@
       </div>
     </section>
     <div class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4">
-      <section class="flex flex-col justify-center md:flex-row md:justify-start gap-8 lg:justify-around flex-wrap">
+      <section class="flex flex-col justify-center md:flex-row lg:justify-start gap-8 lg:justify-around flex-wrap">
         <ArticleComponent
           v-for="article in categoryArticles"
-          :key="article"
+          :key="article.sys.id"
           :article="article"
         />
       </section>
@@ -41,7 +41,6 @@
     })
     .then((response) => {
       categoryArticles = response.items;
-      console.log(categoryArticles);
     })
     .catch(console.error);
 </script>
