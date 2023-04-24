@@ -9,12 +9,20 @@
         </h1>
       </div>
     </section>
-    <div
-        class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4"
+    <div class="container w-[90%] lg:w-[75%] m-auto mt-10 gap-4">
+      <section
+      v-if="hasArticles"
+        class="flex flex-col justify-center md:flex-row lg:justify-start gap-8 lg:justify-around flex-wrap"
       >
-    <section v-for="article in categoryArticles" :key="article.sys.id" class="flex">
-      <ArticleComponent :article="article" />
-    </section>
+        <ArticleComponent
+          v-for="article in categoryArticles"
+          :key="article.sys.id"
+          :article="article"
+        />
+      </section>
+      <section v-else>
+        <p>No articles found</p>
+      </section>
     </div>
   </main>
 </template>
@@ -39,9 +47,11 @@
     })
     .then((response) => {
       categoryArticles = response.items;
-      console.log(categoryArticles);
+      // console.log(categoryArticles);
     })
     .catch(console.error);
+
+  const hasArticles = categoryArticles.length !== 0 ? true : false;
 </script>
 
 <style scoped>
