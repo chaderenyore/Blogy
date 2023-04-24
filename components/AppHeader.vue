@@ -31,7 +31,9 @@
           <div
             class="header-items__desktop--searchbar bg-[#F5F5F5] text-[#6D7280] p-2"
           >
-            <Icon name="ion:search" class="mr-1" />
+            <ClientOnly>
+              <Icon name="ion:search" class="mr-1" />
+            </ClientOnly>
             <input
               required
               type="search"
@@ -42,23 +44,27 @@
           </div>
         </div>
         <div class="hamburger-menu md:hidden">
+        <ClientOnly>
           <Icon
             name="ion:md-menu"
             size="2.8rem"
             class="cursor-pointer mt-1"
             @click="toggleMenu"
           />
+          </ClientOnly>
         </div>
       </div>
       <div
         class="header-items__mobile fixed top-0 right-0 h-[100vh] w-[50%] bg-[#C4C4C4] flex flex-col items-center justify-center transition-all duration-150 ease-in no-display md:hidden"
       >
-        <Icon
-          class="absolute top-6 right-8 cursor-pointer"
-          name="ion:close-round"
-          size="2.3rem"
-          @click="toggleMenu"
-        />
+        <ClientOnly>
+          <Icon
+            class="absolute top-6 right-8 cursor-pointer"
+            name="ion:close-round"
+            size="2.3rem"
+            @click="toggleMenu"
+          />
+        </ClientOnly>
         <NuxtLink to="/" class="nav-link">Home</NuxtLink>
         <NuxtLink to="/coding" class="nav-link">Coding</NuxtLink>
         <NuxtLink to="/lifestyle" class="nav-link">Lifestyle</NuxtLink>
